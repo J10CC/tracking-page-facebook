@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Steam...</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVB71DQC6S"></script>
+    <script>
+        // Initialize Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-YVB71DQC6S'); // Replace with your GA4 Measurement ID
+
+        // Track the click event for Facebook Ad
+        gtag('event', 'click', {
+            'event_category': 'Ad Campaign',
+            'event_label': 'Facebook_GAMEPLAY_AD',
+            'value': 1
+        });
+
+        // Redirect to Steam with UTM parameters
+        setTimeout(function() {
+            window.location.href = "https://store.steampowered.com/app/1818140/Den_of_Wolves/?utm_source=facebook&utm_medium=paid_ad&utm_campaign=GAMEPLAY_AD";
+        }, 150); // Small delay to ensure event tracking
+    </script>
+</head>
+<body>
+    <h1>Redirecting to Steam...</h1>
+    <p>If you are not redirected automatically, <a href="https://store.steampowered.com/app/1818140/Den_of_Wolves/?utm_source=facebook&utm_medium=paid_ad&utm_campaign=GAMEPLAY_AD">click here</a>.</p>
+</body>
+</html>
